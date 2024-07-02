@@ -6,6 +6,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    permissions:
+      deployments: write
+
     environment:
       name: production
       url: ${{steps.deploy-frontend.outputs.url}}
